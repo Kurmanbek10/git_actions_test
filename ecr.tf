@@ -3,10 +3,12 @@ provider "aws" {
 }
 
 resource "aws_ecr_repository" "my_repository" {
-  name = "my-ecr-repository"  # Replace with your desired repository name
+  name = "kurmanbek"  # Set the repository name to "kurmanbek"
+
+  # Enable image tag immutability
+  image_tag_mutability = "IMMUTABLE"
 
   # Optional: Additional settings
-  # image_tag_mutability   = "IMMUTABLE"  # Or "MUTABLE"
   # image_scanning_configuration {
   #   scan_on_push = true
   # }
